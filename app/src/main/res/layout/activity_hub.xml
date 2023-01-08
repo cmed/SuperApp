@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hub">
+
+    <ImageView
+        android:id="@+id/call"
+        android:layout_width="133dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/sms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/call" />
+
+    <ImageView
+        android:id="@+id/sms"
+        android:layout_width="132dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/mail"
+        app:layout_constraintEnd_toStartOf="@+id/music"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/sms" />
+
+    <ImageView
+        android:id="@+id/mail"
+        android:layout_width="132dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mail" />
+
+    <ImageView
+        android:id="@+id/music"
+        android:layout_width="134dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/music" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="135dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/music"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/call"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="130dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="129dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mail"
+        app:srcCompat="@drawable/camera" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

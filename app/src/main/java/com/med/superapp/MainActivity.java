@@ -5,69 +5,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-ImageView sms,call,camera,music,mail,search;
+
+private String user="admin";
+private String pass="admin";
+    private EditText username,password;
+    private ImageView login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        username=findViewById(R.id.username);
+        password=findViewById(R.id.Password);
+        login=findViewById(R.id.login);
 
-        camera=findViewById(R.id.camera);
-        call=findViewById(R.id.call);
-        mail=findViewById(R.id.mail);
-        sms=findViewById(R.id.sms);
-        music=findViewById(R.id.music);
-        search=findViewById(R.id.search);
-
-        sms.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Sms.class );
-                startActivity(intent);
-            }
-        });
+                String inputUsername =username.getText().toString();
+                String inputPassord =password.getText().toString();
+                if (inputUsername.isEmpty() || inputPassord.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Enter credentials correctly",Toast.LENGTH_SHORT).show();
+                }else if(inputUsername.equals(user) && inputPassord.equals(pass)){
+
+                        Intent intent=new Intent(MainActivity.this, Hub.class );
+                        startActivity(intent);
+                    }
+                else  Toast.makeText(MainActivity.this, "Enter credentials correctly",Toast.LENGTH_SHORT).show();
 
 
-        camera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Camera.class );
-                startActivity(intent);
             }
         });
-
-        call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Call.class );
-                startActivity(intent);
-            }
-        });
-
-        mail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Mail.class );
-                startActivity(intent);
-            }
-        });
-
-        music.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Music.class );
-                startActivity(intent);
-            }
-        });
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Search.class );
-                startActivity(intent);
-            }
-        });
-
     }
 }

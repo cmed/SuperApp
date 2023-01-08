@@ -6,76 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="268dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="65dp"
+        android:ems="10"
+        android:hint="Enter your Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="269dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:hint="Enter your Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
     <ImageView
-        android:id="@+id/call"
-        android:layout_width="133dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/sms"
+        android:id="@+id/imageView"
+        android:layout_width="192dp"
+        android:layout_height="124dp"
+
+        android:layout_marginTop="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/call" />
+        app:srcCompat="@drawable/login" />
 
     <ImageView
-        android:id="@+id/sms"
-        android:layout_width="132dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/mail"
-        app:layout_constraintEnd_toStartOf="@+id/music"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/sms" />
+        android:id="@+id/login"
+        android:layout_width="76dp"
+        android:layout_height="64dp"
 
-    <ImageView
-        android:id="@+id/mail"
-        android:layout_width="132dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="129dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/mail" />
-
-    <ImageView
-        android:id="@+id/music"
-        android:layout_width="134dp"
-        android:layout_height="115dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toTopOf="@+id/camera"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/music" />
-
-    <ImageView
-        android:id="@+id/search"
-        android:layout_width="135dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="49dp"
-        app:layout_constraintBottom_toTopOf="@+id/music"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/call"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/search" />
-
-    <ImageView
-        android:id="@+id/camera"
-        android:layout_width="130dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="245dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mail"
-        app:srcCompat="@drawable/camera" />
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:srcCompat="@drawable/go" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

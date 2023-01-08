@@ -37,7 +37,7 @@
             android:name=".Camera"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Hub"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
