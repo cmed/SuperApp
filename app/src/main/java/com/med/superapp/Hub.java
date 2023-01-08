@@ -3,6 +3,7 @@ package com.med.superapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -54,17 +55,18 @@ ImageView sms,call,camera,music,mail,search;
             }
         });
 
-        music.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Hub.this,Music.class );
-                startActivity(intent);
-            }
-        });
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Hub.this,Search.class );
+                Intent intent=new Intent(Intent.ACTION_VIEW );
+                intent.setData(Uri.parse("http://www.google.ma"));
+                startActivity(intent);
+            }
+        });
+      music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Hub.this,Music.class );
                 startActivity(intent);
             }
         });
