@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hub</string>
+    <string name="name">Write your SMS</string>
+    <string name="button">Send SMS</string>
+    <string name="numero_de_telephone">Numero de telephone</string>
+    <string name="nom">Nom</string>
+</resources>
